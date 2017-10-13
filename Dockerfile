@@ -1,5 +1,5 @@
 # initalize from official image
-FROM docker.elastic.co/elasticsearch/elasticsearch:5.4.0
+FROM docker.elastic.co/elasticsearch/elasticsearch:5.6.3
 # un/install plugins
 RUN bin/elasticsearch-plugin remove x-pack
 RUN bin/elasticsearch-plugin install --batch analysis-phonetic
