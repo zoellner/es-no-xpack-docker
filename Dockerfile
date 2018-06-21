@@ -1,7 +1,6 @@
-# initalize from official image
-FROM docker.elastic.co/elasticsearch/elasticsearch:5.6.8
+# initalize from official image. uses -oss image which comes without xpack
+FROM docker.elastic.co/elasticsearch/elasticsearch-oss:6.3.0
 # un/install plugins
-RUN bin/elasticsearch-plugin remove x-pack
 RUN bin/elasticsearch-plugin install --batch analysis-phonetic
 # add default config
 ADD elasticsearch.yml /usr/share/elasticsearch/config/
